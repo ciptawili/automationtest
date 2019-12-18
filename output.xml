@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191218 12:25:09.655" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/ciptawiliansyah/Documents/Automation/My/TestSuite" id="s1" name="TestSuite">
+<suite source="/Users/ciptawiliansyah/Documents/Automation/My/TestSuite/test.robot" id="s1-s1" name="Test">
+<test id="s1-s1-t1" name="Test Category">
+<kw name="Scenario : Open Category">
+<arguments>
+<arg>Women</arg>
+</arguments>
+<kw name="Given Go To Test Home Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20191218 12:25:09.809" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/'.</msg>
+<status status="PASS" endtime="20191218 12:25:24.120" starttime="20191218 12:25:09.809"></status>
+</kw>
+<status status="PASS" endtime="20191218 12:25:24.120" starttime="20191218 12:25:09.809"></status>
+</kw>
+<kw name="When Click Category ${category_name}" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']//a[@title='${category}']</arg>
+</arguments>
+<msg timestamp="20191218 12:25:24.121" level="INFO">Clicking element '//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']//a[@title='Women']'.</msg>
+<status status="PASS" endtime="20191218 12:25:25.350" starttime="20191218 12:25:24.121"></status>
+</kw>
+<status status="PASS" endtime="20191218 12:25:25.350" starttime="20191218 12:25:24.121"></status>
+</kw>
+<kw name="Then Verify category" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>element verify</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191218 12:25:31.180" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191218 12:25:31.180" starttime="20191218 12:25:30.518"></status>
+</kw>
+<msg timestamp="20191218 12:25:31.182" level="FAIL">Element 'element verify' not visible after 5 seconds.</msg>
+<status status="FAIL" endtime="20191218 12:25:31.182" starttime="20191218 12:25:25.351"></status>
+</kw>
+<status status="FAIL" endtime="20191218 12:25:31.182" starttime="20191218 12:25:25.351"></status>
+</kw>
+<status status="FAIL" endtime="20191218 12:25:31.182" starttime="20191218 12:25:09.808"></status>
+</kw>
+<kw type="teardown" name="Close Brower">
+<msg timestamp="20191218 12:25:31.187" level="FAIL">No keyword with name 'Close Brower' found. Did you mean:
+    SeleniumLibrary.Close Browser</msg>
+<status status="FAIL" endtime="20191218 12:25:31.187" starttime="20191218 12:25:31.187">No keyword with name 'Close Brower' found. Did you mean:
+    SeleniumLibrary.Close Browser</status>
+</kw>
+<status status="FAIL" endtime="20191218 12:25:31.187" critical="yes" starttime="20191218 12:25:09.808">Element 'element verify' not visible after 5 seconds.
+
+Also teardown failed:
+No keyword with name 'Close Brower' found. Did you mean:
+    SeleniumLibrary.Close Browser</status>
+</test>
+<status status="FAIL" endtime="20191218 12:25:31.188" starttime="20191218 12:25:09.674"></status>
+</suite>
+<status status="FAIL" endtime="20191218 12:25:31.189" starttime="20191218 12:25:09.658"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="TestSuite" pass="0">TestSuite</stat>
+<stat fail="1" id="s1-s1" name="Test" pass="0">TestSuite.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
