@@ -1,79 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20191218 12:25:09.655" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
-<suite source="/Users/ciptawiliansyah/Documents/Automation/My/TestSuite" id="s1" name="TestSuite">
-<suite source="/Users/ciptawiliansyah/Documents/Automation/My/TestSuite/test.robot" id="s1-s1" name="Test">
-<test id="s1-s1-t1" name="Test Category">
-<kw name="Scenario : Open Category">
-<arguments>
-<arg>Women</arg>
-</arguments>
-<kw name="Given Go To Test Home Page" library="resource">
+<robot rpa="false" generated="20200123 15:14:30.780" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/ciptawiliansyah/Documents/Automation/My/TestSuite/test.robot" id="s1" name="Test">
+<test id="s1-t1" name="Scenario : Filter Data Failed">
+<kw name="Given Go To Login Page">
+<kw name="Go To Test Home Page" library="resource">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20191218 12:25:09.809" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/'.</msg>
-<status status="PASS" endtime="20191218 12:25:24.120" starttime="20191218 12:25:09.809"></status>
+<msg timestamp="20200123 15:14:30.956" level="INFO">Opening browser 'chrome' to base url 'http://qa-interview.srcli.xyz/'.</msg>
+<status status="PASS" endtime="20200123 15:14:33.021" starttime="20200123 15:14:30.956"></status>
 </kw>
-<status status="PASS" endtime="20191218 12:25:24.120" starttime="20191218 12:25:09.809"></status>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.3s</arg>
+</arguments>
+<status status="PASS" endtime="20200123 15:14:33.022" starttime="20200123 15:14:33.021"></status>
 </kw>
-<kw name="When Click Category ${category_name}" library="resource">
+<status status="PASS" endtime="20200123 15:14:33.022" starttime="20200123 15:14:30.955"></status>
+</kw>
+<kw name="Open Login Page" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}/login</arg>
+</arguments>
+<msg timestamp="20200123 15:14:33.023" level="INFO">Opening url 'http://qa-interview.srcli.xyz//login'</msg>
+<status status="PASS" endtime="20200123 15:14:33.773" starttime="20200123 15:14:33.023"></status>
+</kw>
+<status status="PASS" endtime="20200123 15:14:33.773" starttime="20200123 15:14:33.022"></status>
+</kw>
+<kw name="Login Page Is Opened" library="resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20200123 15:14:34.093" level="INFO">Current page contains element '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20200123 15:14:34.093" starttime="20200123 15:14:33.774"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200123 15:14:34.407" level="INFO">Current page contains element '//input[@name='password']'.</msg>
+<status status="PASS" endtime="20200123 15:14:34.408" starttime="20200123 15:14:34.094"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${SUBMIT}</arg>
+</arguments>
+<msg timestamp="20200123 15:14:34.725" level="INFO">Current page contains element '//input[@value='Login']'.</msg>
+<status status="PASS" endtime="20200123 15:14:34.725" starttime="20200123 15:14:34.408"></status>
+</kw>
+<status status="PASS" endtime="20200123 15:14:34.725" starttime="20200123 15:14:33.773"></status>
+</kw>
+<status status="PASS" endtime="20200123 15:14:34.726" starttime="20200123 15:14:30.955"></status>
+</kw>
+<kw name="When Input root And root123" library="resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']//a[@title='${category}']</arg>
+<arg>${USERNAME}</arg>
 </arguments>
-<msg timestamp="20191218 12:25:24.121" level="INFO">Clicking element '//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']//a[@title='Women']'.</msg>
-<status status="PASS" endtime="20191218 12:25:25.350" starttime="20191218 12:25:24.121"></status>
+<msg timestamp="20200123 15:14:34.727" level="INFO">Clicking element '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20200123 15:14:35.431" starttime="20200123 15:14:34.727"></status>
 </kw>
-<status status="PASS" endtime="20191218 12:25:25.350" starttime="20191218 12:25:24.121"></status>
-</kw>
-<kw name="Then Verify category" library="resource">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is visible.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>element verify</arg>
+<arg>${USERNAME}</arg>
+<arg>${args1}</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20191218 12:25:31.180" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20191218 12:25:31.180" starttime="20191218 12:25:30.518"></status>
+<msg timestamp="20200123 15:14:35.432" level="INFO">Typing text 'root' into text field '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20200123 15:14:36.431" starttime="20200123 15:14:35.432"></status>
 </kw>
-<msg timestamp="20191218 12:25:31.182" level="FAIL">Element 'element verify' not visible after 5 seconds.</msg>
-<status status="FAIL" endtime="20191218 12:25:31.182" starttime="20191218 12:25:25.351"></status>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200123 15:14:36.432" level="INFO">Clicking element '//input[@name='password']'.</msg>
+<status status="PASS" endtime="20200123 15:14:37.094" starttime="20200123 15:14:36.432"></status>
 </kw>
-<status status="FAIL" endtime="20191218 12:25:31.182" starttime="20191218 12:25:25.351"></status>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD}</arg>
+<arg>${args2}</arg>
+</arguments>
+<msg timestamp="20200123 15:14:37.095" level="INFO">Typing password into text field '//input[@name='password']'.</msg>
+<status status="PASS" endtime="20200123 15:14:38.056" starttime="20200123 15:14:37.095"></status>
 </kw>
-<status status="FAIL" endtime="20191218 12:25:31.182" starttime="20191218 12:25:09.808"></status>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT}</arg>
+</arguments>
+<msg timestamp="20200123 15:14:38.057" level="INFO">Clicking button '//input[@value='Login']'.</msg>
+<status status="PASS" endtime="20200123 15:14:39.277" starttime="20200123 15:14:38.057"></status>
 </kw>
-<kw type="teardown" name="Close Brower">
-<msg timestamp="20191218 12:25:31.187" level="FAIL">No keyword with name 'Close Brower' found. Did you mean:
-    SeleniumLibrary.Close Browser</msg>
-<status status="FAIL" endtime="20191218 12:25:31.187" starttime="20191218 12:25:31.187">No keyword with name 'Close Brower' found. Did you mean:
-    SeleniumLibrary.Close Browser</status>
+<status status="PASS" endtime="20200123 15:14:39.277" starttime="20200123 15:14:34.726"></status>
 </kw>
-<status status="FAIL" endtime="20191218 12:25:31.187" critical="yes" starttime="20191218 12:25:09.808">Element 'element verify' not visible after 5 seconds.
-
-Also teardown failed:
-No keyword with name 'Close Brower' found. Did you mean:
-    SeleniumLibrary.Close Browser</status>
+<kw name="And Logout" library="resource">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" endtime="20200123 15:14:39.590" starttime="20200123 15:14:39.278"></status>
+</kw>
+<status status="PASS" endtime="20200123 15:14:39.590" starttime="20200123 15:14:39.278"></status>
+</kw>
+<kw name="Then Home Page Opened" library="resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WELCOME}</arg>
+</arguments>
+<msg timestamp="20200123 15:14:39.906" level="INFO">Current page contains element '//h1[contains (text(), 'Welcome!')]'.</msg>
+<status status="PASS" endtime="20200123 15:14:39.906" starttime="20200123 15:14:39.591"></status>
+</kw>
+<status status="PASS" endtime="20200123 15:14:39.906" starttime="20200123 15:14:39.590"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200123 15:14:40.274" starttime="20200123 15:14:39.907"></status>
+</kw>
+<tags>
+<tag>data</tag>
+</tags>
+<status status="PASS" endtime="20200123 15:14:40.274" critical="yes" starttime="20200123 15:14:30.954"></status>
 </test>
-<status status="FAIL" endtime="20191218 12:25:31.188" starttime="20191218 12:25:09.674"></status>
-</suite>
-<status status="FAIL" endtime="20191218 12:25:31.189" starttime="20191218 12:25:09.658"></status>
+<status status="PASS" endtime="20200123 15:14:40.275" starttime="20200123 15:14:30.782"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
+<stat fail="0" pass="1">data</stat>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="TestSuite" pass="0">TestSuite</stat>
-<stat fail="1" id="s1-s1" name="Test" pass="0">TestSuite.Test</stat>
+<stat fail="0" id="s1" name="Test" pass="1">Test</stat>
 </suite>
 </statistics>
 <errors>
