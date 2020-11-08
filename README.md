@@ -1,4 +1,4 @@
-Test Automation using **Cucumber**, **Selenium**, **REST-Assured**, **JUnit** and **Maven**, with **Java Language** in Bhinneka.com Web
+Test Automation using **Cucumber**, **Selenium**, **REST-Assured**, **JUnit** and **Maven**, with **Java Language**
 ---
 ---
 
