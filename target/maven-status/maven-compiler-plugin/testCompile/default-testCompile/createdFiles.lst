@@ -1,0 +1,15 @@
+Parallel02IT.class
+PageObject/HomePage.class
+Parallel01IT.class
+PageObject/SearchPage.class
+StepDefinitions/LoginSteps.class
+StepDefinitions/HomeSteps.class
+Utilities/BaseClass.class
+PageObject/StoreLandingPage.class
+Utilities/PropertiesReader.class
+StepDefinitions/SignUpSteps.class
+Utilities/DataGenerator.class
+StepDefinitions/Hooks.class
+StepDefinitions/SearchSteps.class
+Parallel03IT.class
+TestRunner.class
