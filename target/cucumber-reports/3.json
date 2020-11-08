@@ -1,0 +1,96 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# new feature"
+      },
+      {
+        "line": 2,
+        "value": "# Tags: optional"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 8703087359,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Sign Up With Valid Data",
+        "description": "",
+        "id": "sign-up;sign-up-with-valid-data",
+        "after": [
+          {
+            "result": {
+              "duration": 127885950,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2363672752,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Open sign up page",
+            "match": {
+              "location": "SignUpSteps.openSignUpPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3523631483,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Sign up with valid data",
+            "match": {
+              "location": "SignUpSteps.signUpWithValidData()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1257624592,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Success Sign Up",
+            "match": {
+              "location": "SignUpSteps.successSignUp()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Positive"
+          }
+        ]
+      }
+    ],
+    "name": "Sign Up",
+    "description": "",
+    "id": "sign-up",
+    "keyword": "Feature",
+    "uri": "/Users/ciptawiliansyah/Documents/Automation/examp_test2/src/test/resources/features/SignUpTest.feature"
+  }
+]

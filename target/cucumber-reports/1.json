@@ -1,0 +1,106 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# new feature"
+      },
+      {
+        "line": 2,
+        "value": "# Tags: optional"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 8621190399,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Valid Login",
+        "description": "",
+        "id": "login-test;valid-login",
+        "after": [
+          {
+            "result": {
+              "duration": 129453663,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 873542870,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Open Login Page",
+            "match": {
+              "location": "LoginSteps.openLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1149598951,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Input email \"ciptawiliansyah@gmail.com\" and password \"ciptawili\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ciptawiliansyah@gmail.com",
+                  "offset": 13
+                },
+                {
+                  "val": "ciptawili",
+                  "offset": 54
+                }
+              ],
+              "location": "LoginSteps.inputEmailAndPassword(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1481017521,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Login Successful",
+            "match": {
+              "location": "LoginSteps.loginSuccessful()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Positive"
+          }
+        ]
+      }
+    ],
+    "name": "Login Test",
+    "description": "",
+    "id": "login-test",
+    "keyword": "Feature",
+    "uri": "/Users/ciptawiliansyah/Documents/Automation/examp_test2/src/test/resources/features/LoginTests.feature"
+  }
+]
