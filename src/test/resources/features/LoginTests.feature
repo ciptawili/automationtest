@@ -6,5 +6,5 @@ Feature: Login Test
   @Positive
   Scenario: Valid Login
     Given Open Login Page
-    When Input email "ciptawiliansyah@gmail.com" and password "ciptawili"
+    When Input email "<>" and password "<>"
     Then Login Successful
